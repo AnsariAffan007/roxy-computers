@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 4rem);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.success-alert, .danger-alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.success-alert {
+    background-color: #45ffab;
+    color: #004726;
+}
+
+.danger-alert {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.success-alert.disabled {
+    display: none;
+}
+
+.success-alert.activate {
+    display: block;
+}
+
+.navbar {
+    background: #000;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+    font-weight: 600;
+    color: #00f9ff;
+}
+
+.nav-link.active {
+    color: #00f9ff !important;
+}
+
+.navbar-nav .nav-item .btn {
+    border: 2px solid #00f9ff;
+    color: #00f9ff;
+    border-radius: 0;
+}
+
+.navbar-nav .nav-item .btn:hover {
+    color: #00f9ff;
+}
+
+#mainCarousel .carousel-item button {
+    color: #00f9ff;
+    background: transparent;
+    border: 1px solid #00f9ff;
+}
+
+#mainCarousel #carouselExampleAutoplaying {
+    /* height: calc(var(--carouselHeight)); */
+    height: 100vh;
+}
+
+#mainCarousel .carousel-item {
+    /* height: calc(var(--carouselHeight)); */
+    height: 100vh;
+}
+
+#mainCarousel .slide-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/repair4.jpg');
+}
+
+#mainCarousel .slide-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/repair5.jpg');
+}
+
+#mainCarousel .slide-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/repair3.jpg');
+}
+
+#mainCarousel .carousel-item {
+    background-size: cover;
+    background-position: center;
+}
+
+#mainCarousel .carousel-item div {
+    height: 100%;
+    width: 60%;
+}
+
+#mainCarousel .carousel-item div a {
+    bottom: 10%;
+}
+
+#mainCarousel .carousel-item div i {
+    font-size: 2rem;
+}
+
+#keyServices {
+    background: #fff;
+    /* background: #000; */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../images/admin-bg-4.jpg'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../images/admin-login-bg.jpg');
+}
+
+#keyServices .custom-card-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/service1.png');
+}
+
+#keyServices .custom-card-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/service4.png');
+}
+
+#keyServices .custom-card-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/service3.png');
+}
+
+#keyServices .custom-card-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/service2.png');
+}
+
+#keyServices .custom-card {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    color: #fafafa;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#whyUs {
+    background-color: #fff;
+    color: #000;
+}
+
+.service-card i {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#testimonials {
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../images/testimonial.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#testimonials .carousel-item div {
+    width: 60%;
+}
+
+#testimonials .carousel-item div i {
+    font-size: 7rem;
+    margin-bottom: 2rem;
+}
+
+#about {
+    background: #000;
+}
+
+#copyright {
+    background-color: #000;
+}
+
+.text-neon {
+    color: #00f9ff;
+}
+
+.modal-content {
+    background: #000;
+    border: 2px solid #00f9ff;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: 1px solid #00f9ff;
+    color: #00f9ff;
+}
+
+.modal-close-btn:hover {
+    background-color: #00f9ff;
+    color: #000;
+}
+
+.modal-submit-btn {
+    background-color: #00f9ff;
+    color: #000;
+}
+
+.modal-submit-btn:hover {
+    background-color: #00d1d4;
+    color: #000;
+}
+
+@media (max-width: 576px) {
+
+    #mainCarousel .carousel-item p,
+    #keyServices .col p,
+    #whyUs .col p,
+    #testimonials .carousel-item p,
+    #about .col>div>div,
+    #copyright>span {
+        font-size: 0.8rem;
+    }
+}

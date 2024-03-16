@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); -%>
+</head>
+
+<body>
+
+    <!-- Success Message on Reporting Problem -->
+    <% if(success) { %>
+    <div id="successAlert" class="success-alert alert alert-success alert-dismissible activate" role="alert">
+        <p>Issue Registered! Please wait till our experts contact you by the Email Address you provided.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <% } else if(danger) {%>
+    <div id="dangerAlert" class="danger-alert alert alert-danger alert-dismissible activate" role="alert ">
+        <p>A complaint with this Name already exists! Please wait for reply, or check you Mail.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <%}%>
+
+    <!-- Danger alert on duplicate submission -->
+
+    <style>
+        body::after {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            z-index: -1;
+            content: url(../images/repair2.jpg) url(../images/repair3.jpg) url(../images/repair5.jpg);
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">RoxyComputers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbarHome" aria-controls="offcanvasNavbarHome" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" id="offcanvasNavbarHome">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkLabel">RoxyComputers</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <ul class="navbar-nav ms-lg-auto ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#keyServices">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item mx-lg-2 my-lg-auto my-3">
+                        <a class="btn btn-sm" href="/report-problem">Report Problem</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Carousel -->
+    <section id="mainCarousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item slide-1 active">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center mx-auto text-light position-relative">
+                        <h1 class="">Key Point 1</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+                            accusamus enim quod, ratione nulla provident maiores possimus totam harum veniam
+                            exercitationem
+                            ipsa
+                            quos? Voluptatem laboriosam illum tempora vero blanditiis odit?
+                        </p>
+                        <button onclick="location.href='/report-problem'" class="btn btn-dark">Report
+                            Problem</button>
+                        <a href="#keyServices" class="text-neon position-absolute"><i class="bi bi-mouse"></i></a>
+                    </div>
+                </div>
+                <div class="carousel-item slide-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center mx-auto text-light">
+                        <h1 class="">Key Point 2</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+                            accusamus enim quod, ratione nulla provident maiores possimus totam harum veniam
+                            exercitationem
+                            ipsa
+                            quos? Voluptatem laboriosam illum tempora vero blanditiis odit?
+                        </p>
+                        <button onclick="location.href='/report-problem'" class="btn btn-dark">Report
+                            Problem</button>
+                        <a href="#keyServices" class="text-neon position-absolute"><i class="bi bi-mouse"></i></a>
+                    </div>
+                </div>
+                <div class="carousel-item slide-3">
+                    <div class="d-flex flex-column justify-content-center align-items-center mx-auto text-light">
+                        <h1 class="">Key Point 3</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+                            accusamus enim quod, ratione nulla provident maiores possimus totam harum veniam
+                            exercitationem
+                            ipsa
+                            quos? Voluptatem laboriosam illum tempora vero blanditiis odit?
+                        </p>
+                        <button onclick="location.href='/report-problem'" class="btn btn-dark">Report
+                            Problem</button>
+                        <a href="#keyServices" class="text-neon position-absolute"><i class="bi bi-mouse"></i></a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="keyServices" class="py-4">
+        <!-- <h2 class="text-center py-2">Our <span class="text-neon">Key</span> Services</h2> -->
+        <div class="container pb-3">
+            <div class="row text-center g-3 m-0">
+                <div class="col col-md-6 col-12">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center custom-card custom-card-1 bg-dark">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias soluta voluptas aspernatur,
+                            animi
+                            repudiandae harum error quod maxime deserunt odio?</p>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-12">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center custom-card bg-dark custom-card-2">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias soluta voluptas aspernatur,
+                            animi
+                            repudiandae harum error quod maxime deserunt odio?</p>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-12">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center custom-card custom-card-3 bg-dark">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias soluta voluptas aspernatur,
+                            animi
+                            repudiandae harum error quod maxime deserunt odio?</p>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-12">
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center custom-card custom-card-4 bg-dark">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias soluta voluptas aspernatur,
+                            animi
+                            repudiandae harum error quod maxime deserunt odio?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="whyUs" class="py-5">
+        <div class="container">
+            <h2 class="text-center pt-2"><span class="text-neon">Why</span> Us ?</h2>
+
+            <div class="row text-center g-3 m-0 mt-5">
+
+                <div class="col col-md-4 col-12">
+                    <div class="service-card">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>We are welcoming</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil explicabo minima facilis
+                            eligendi
+                            officiis vel molestiae distinctio id cum asperiores.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-12">
+                    <div class="service-card">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>We are welcoming</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil explicabo minima facilis
+                            eligendi
+                            officiis vel molestiae distinctio id cum asperiores.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-12">
+                    <div class="service-card">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>We are welcoming</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil explicabo minima facilis
+                            eligendi
+                            officiis vel molestiae distinctio id cum asperiores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 ">
+        <h2 class="text-center mb-5 text-dark">Testimonials</h2>
+        <div id="testimonialCarousel" class="carousel slide text-center">
+
+            <div class="carousel-indicators mb-auto">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="testimonialSlide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                    aria-label="testimonialSlide 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                    aria-label="testimonialSlide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore non
+                            adipisci
+                            nulla, possimus
+                            voluptatum neque pariatur similique suscipit culpa repellat quis eos ipsum consequatur
+                            exercitationem nesciunt, magni corrupti explicabo vero nemo! Aspernatur asperiores
+                            exercitationem quam sapiente? Debitis laudantium sunt laborum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore non
+                            adipisci
+                            nulla, possimus
+                            voluptatum neque pariatur similique suscipit culpa repellat quis eos ipsum consequatur
+                            exercitationem nesciunt, magni corrupti explicabo vero nemo! Aspernatur asperiores
+                            exercitationem quam sapiente? Debitis laudantium sunt laborum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore non
+                            adipisci
+                            nulla, possimus
+                            voluptatum neque pariatur similique suscipit culpa repellat quis eos ipsum consequatur
+                            exercitationem nesciunt, magni corrupti explicabo vero nemo! Aspernatur asperiores
+                            exercitationem quam sapiente? Debitis laudantium sunt laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="about" class="pt-5">
+        <h2 class="text-center text-neon">About Us</h2>
+        <div class="row g-5 p-md-5 p-0 m-0">
+            <div class="col col-md-6 col-12 order-2 my-auto">
+                <div>
+                    <div class="my-3 text-light"><span class="text-neon">Website</span>: www.google.com</div>
+                    <div class="my-3 text-light"><span class="text-neon">Contact</span>: 1234567890 / 1234567890
+                    </div>
+                    <div class="my-3 text-light"><span class="text-neon">Address</span>: 181/56-B, Krishna CHS,
+                        Teachers
+                        Colony, Pipe Road, Kurla (W),
+                        Mumbai 400
+                        070</div>
+                    <div class="my-3 text-light"><span class="text-neon">Timings</span>: 9:00 AM - 6:00 PM</div>
+
+                    <div class="social-icons mt-5 d-flex justify-content-center">
+                        <!-- Facebook -->
+                        <a href="" class="text-white mx-4"><i class="fab fa-facebook-f"></i></a>
+                        <!-- Twitter -->
+                        <a href="" class="text-white mx-4"><i class="fab fa-twitter"></i></a>
+                        <!-- Linkedin -->
+                        <a href="" class="text-white mx-4"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- Whatsapp -->
+                        <a href="" class="text-white mx-4"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-6 col-12 order-md-2 my-auto">
+                <div class="text-center">
+                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="770" height="510" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=byculla station&t=&z=20&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                href="https://2yu.co">2yu</a><br>
+                            <style>
+                                .mapouter {
+                                    height: 300px;
+                                    width: 100%;
+                                }
+                            </style><a href="https://embedgooglemap.2yu.co">html embed google map</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    /* background: none !important; */
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="copyright" class="text-center text-white py-3">
+        <span>&#169; Copyright @2023</span>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

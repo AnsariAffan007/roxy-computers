@@ -1,0 +1,47 @@
+body {
+    background: url("../images/admin-login-bg.jpg");
+}
+
+#admin-login-form {
+    margin-top: 10%;
+}
+
+#admin-login-form .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 20px;
+    width: 40%;
+} 
+
+.form-head h2 {
+    color: #00f9ff;
+    margin: 0;
+}
+
+.form-head i {
+    font-size: 3rem;
+    color: #00f9ff;
+}
+
+.login-btn {
+    background-color: #00f9ff;
+}
+
+.login-btn:hover {
+    background-color: #00d2d5;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    #admin-login-form {
+        margin-top: 20%;
+    }
+    #admin-login-form .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    #admin-login-form {
+        margin-top: 30%;
+    }
+}

@@ -1,0 +1,36 @@
+body {
+    background: url("../images/reportProblemBg.jpg");
+}
+
+#reportForm .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    border-radius: 20px;
+}
+
+#clientAddress {
+    resize: none;
+}
+
+.submit-form {
+    background-color: #00f9ff;
+}
+
+.submit-form:hover {
+    background-color: #00d2d5;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    #reportForm {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-group label,
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.8rem;
+    }
+}

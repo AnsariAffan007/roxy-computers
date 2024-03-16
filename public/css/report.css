@@ -1,0 +1,37 @@
+#details .container {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); */
+    background: #e0e0e0;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    #details {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.dropdown>button,
+.dropdown>button:hover,
+.dropdown>button:enabled,
+.dropdown>button:active,
+.dropdown>button:focus {
+    font-size: 0.8rem;
+    background-color: #00f9ff;
+}
+
+ul.dropdown-menu {
+    min-width: fit-content;
+    padding: 2px 0;
+}
+
+.dropdown-item {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+    .form-group label,
+    .form-group span {
+        font-size: 0.8rem;
+    }
+}

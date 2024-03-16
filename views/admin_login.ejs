@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); -%>
+        <link rel="stylesheet" href="css/admin_login.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">RoxyComputers</a>
+        </div>
+    </nav>
+
+
+    <section id="admin-login-form">
+        <div class="container p-lg-5 p-md-4 py-5 px-3">
+            <form action="/admin-login" method="post">
+                <div class="form-head d-flex justify-content-center"><i class="fa-solid fa-lock"></i></div>
+                <div class="form-group mt-5">
+                    <input type="text" class="form-control" name="username" placeholder="Enter username"
+                        autocomplete="off">
+                </div>
+                <div class="form-group mt-3">
+                    <input type="password" class="form-control" name="password" placeholder="Password"
+                        autocomplete="off">
+                </div>
+                <button type="submit" class="btn login-btn mt-4">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const navigation = document.querySelector(".navbar");
+        const navigationHeight = navigation.offsetHeight;
+
+        document.documentElement.style.setProperty('--form-height', "100vh - " + navigationHeight + 'px');
+
+    </script>
+</body>
+
+</html>
